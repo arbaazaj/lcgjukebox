@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-const Color colorElements = Color(0xFFc1c0f9);
+const Color colorElement = Color(0xFFc1c0f9);
 const Color colorBackground = Color(0xFFbefac5);
 const Color colorVolumeGreen = Color(0xFF2bc528);
 const Color colorTextColor = Color(0xFF06101e);

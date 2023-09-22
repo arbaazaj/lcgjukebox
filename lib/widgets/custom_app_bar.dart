@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lcgjukebox/methods/box_shadow.dart';
 import 'package:lcgjukebox/themes/color.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -14,7 +15,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: colorElements,
+        color: colorElement,
         border: Border.all(color: colorTextColor, width: 3.0),
         borderRadius: const BorderRadius.only(
           bottomLeft: Radius.circular(20.0),
@@ -24,25 +25,20 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       child: AppBar(
         centerTitle: true,
         backgroundColor: Colors.transparent,
-        title: const Column(
+        title: Column(
           children: [
             Text(
               'LCG JukeBox',
               style: TextStyle(
                 shadows: [
-                  BoxShadow(
-                      color: colorTextColor,
-                      blurRadius: 4.0,
-                      blurStyle: BlurStyle.solid,
-                      offset: Offset(1.0, 1.0),
-                      spreadRadius: 2.0),
+                  buildBoxShadow()
                 ],
                 color: colorTextColor,
                 fontWeight: FontWeight.bold,
                 fontSize: 28.0,
               ),
             ),
-            Divider(
+            const Divider(
               indent: 60.0,
               endIndent: 60.0,
               thickness: 2.0,

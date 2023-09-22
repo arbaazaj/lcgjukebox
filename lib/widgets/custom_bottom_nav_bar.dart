@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lcgjukebox/methods/box_shadow.dart';
 import 'package:lcgjukebox/themes/color.dart';
 
 class CustomBottomNavBar extends StatelessWidget {
@@ -8,7 +9,7 @@ class CustomBottomNavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          color: colorElements,
+          color: colorElement,
           border: Border.all(
             color: colorTextColor,
             width: 3.0,
@@ -23,49 +24,30 @@ class CustomBottomNavBar extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Text(
+            Text(
               'Menu',
               style: TextStyle(
-                fontSize: 20.0,
-                fontWeight: FontWeight.bold,
-                shadows: [
-                  BoxShadow(
-                    color: colorTextColor,
-                    blurRadius: 4.0,
-                    blurStyle: BlurStyle.solid,
-                    offset: Offset(1.0, 1.0),
-                    spreadRadius: 2.0,
-                  ),
-                ]
-              ),
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  shadows: [
+                    buildBoxShadow(),
+                  ]),
             ),
             IconButton(
               onPressed: () {},
-              icon: const Icon(
+              icon: Icon(
                 Icons.play_arrow_outlined,
                 shadows: [
-                  BoxShadow(
-                    color: colorTextColor,
-                    blurRadius: 4.0,
-                    blurStyle: BlurStyle.solid,
-                    offset: Offset(1.0, 1.0),
-                    spreadRadius: 2.0,
-                  ),
+                  buildBoxShadow(),
                 ],
                 size: 36.0,
               ),
             ),
-            const Text(
+            Text(
               'Exit',
               style: TextStyle(
                 shadows: [
-                  BoxShadow(
-                    color: colorTextColor,
-                    blurRadius: 4.0,
-                    blurStyle: BlurStyle.solid,
-                    offset: Offset(1.0, 1.0),
-                    spreadRadius: 2.0,
-                  ),
+                  buildBoxShadow(),
                 ],
                 fontSize: 20.0,
                 fontWeight: FontWeight.bold,
