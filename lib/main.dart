@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lcgjukebox/screens/homepage.dart';
+import 'package:lcgjukebox/screen/homepage.dart';
 
 void main() {
   runApp(const MyApp());

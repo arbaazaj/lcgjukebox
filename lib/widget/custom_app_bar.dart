@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:lcgjukebox/methods/box_shadow.dart';
+import 'package:lcgjukebox/method/box_shadow.dart';
 import 'package:lcgjukebox/themes/color.dart';
+import 'package:lcgjukebox/widget/appbar_component/line_painter.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   /// The default [size] is 40.0
@@ -30,20 +31,25 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             Text(
               'LCG JukeBox',
               style: TextStyle(
-                shadows: [
-                  buildBoxShadow()
-                ],
+                shadows: [buildBoxShadow()],
                 color: colorTextColor,
                 fontWeight: FontWeight.bold,
                 fontSize: 28.0,
               ),
             ),
-            const Divider(
-              indent: 60.0,
-              endIndent: 60.0,
-              thickness: 2.0,
-              color: colorTextSubtitle,
+            CustomPaint(
+              size: Size(MediaQuery.of(context).size.width * 0.50, 10),
+              painter: LinePainter(
+                width: MediaQuery.of(context).size.width * 0.50,
+                lineColor: colorTextColor,
+              ),
             ),
+            // const Divider(
+            //   indent: 60.0,
+            //   endIndent: 60.0,
+            //   thickness: 2.0,
+            //   color: colorTextSubtitle,
+            // ),
             //SizedBox(height: 5.0),
           ],
         ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lcgjukebox/methods/box_shadow.dart';
+import 'package:lcgjukebox/method/box_shadow.dart';
 import 'package:lcgjukebox/themes/color.dart';
 
 class CustomBottomNavBar extends StatelessWidget {
